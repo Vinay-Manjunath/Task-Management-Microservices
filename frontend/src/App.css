@@ -1,0 +1,143 @@
+/* Homepage Container */
+.homepage-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
+  opacity: 0;
+  animation: fadeIn 1s forwards, dropInLeftImage 1s forwards;
+}
+
+/* Fade-in animation for homepage */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Drop-in animation for left-side image */
+@keyframes dropInLeftImage {
+  0% {
+    transform: translateY(-100px); /* Start above the original position */
+  }
+  100% {
+    transform: translateY(0); /* Drop to the normal position */
+  }
+}
+
+/* Left-Side */
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: dropLeft 1s forwards;
+}
+
+/* Animation for left-side image drop */
+@keyframes dropLeft {
+  0% {
+    transform: translateY(-100px); /* Start above */
+  }
+  100% {
+    transform: translateY(0); /* Drop to original position */
+  }
+}
+
+/* Right-Side */
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: moveRight 1s forwards;
+  margin-left: 20px; /* Reduces gap between right and left */
+}
+
+/* Title Animation: Move from Left to Right */
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100px); /* Start from the left */
+  }
+  100% {
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+/* Header Section */
+.header-container {
+  display: flex;
+  align-items: center;/* Reduced gap */
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-right: 20px; /* Reduced space between logo and title */
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply fade-in effect to title */
+.title {
+  font-family: "Arial", sans-serif;
+  font-size: 50px;
+  font-weight: 1000;
+  color: #4A90E2;
+  margin: 0;
+  margin-left: 20px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInTitle 2s forwards; /* Apply fade-in animation */
+  animation-delay: 1s; /* Delay the animation by 1 second */
+}
+
+/* Button Styles */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #4facfe;
+}
+
+/* Paragraph Styling */
+p {
+  font-size: 14px;
+}
+
+p button {
+  background: none;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+}
+
+p button:hover {
+  text-decoration: underline;
+}
+
+/* Task Image Styling */
+.task-image {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,60 @@
+/* Container for the authentication form */
+.auth-container {
+    width: 100%;
+    max-width: 450px; /* Slightly wider form */
+    margin: auto;
+    padding: 30px;
+    background: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-container h2 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form container */
+  .auth-form {
+    display: flex;
+    flex-direction: column; /* Stack fields vertically */
+    gap: 20px; /* Space between form fields */
+  }
+  
+  /* Input fields */
+  .auth-form input {
+    width: 100%;
+    padding: 15px; /* Larger padding */
+    font-size: 16px; /* Larger font size */
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  /* Button styling */
+  .auth-form button {
+    padding: 15px;
+    font-size: 18px; /* Larger text on button */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  

@@ -1,0 +1,48 @@
+/* HomePage.css */
+.homepage-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-side {
+  flex: 1;
+  padding: 20px;
+}
+
+.right-side {
+  flex: 1;
+  padding: 20px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.task-image {
+  max-width: 100%;
+}
+
+.title {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.error {
+  color: red;
+}
+
+.drop-in {
+  animation: dropIn 1s ease-out;
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

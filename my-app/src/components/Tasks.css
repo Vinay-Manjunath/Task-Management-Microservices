@@ -1,0 +1,335 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* General body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.notification-overlay {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .notification-overlay h5 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .notification-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .notification-item {
+    padding: 6px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+  }
+  
+  .notification-item:last-child {
+    border-bottom: none;
+  }
+  
+/* Navbar container styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensures logo is on the left and buttons are on the right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* Light background color for the navbar */
+  }
+  
+  /* Navbar brand (logo) */
+  .navbar-brand {
+    flex: 1;
+  }
+  
+  .navbar-brand .logo {
+    height: 40px; /* Adjust logo size */
+    width: auto;
+  }
+  
+  /* Navigation buttons (Logout & Notifications) */
+  .navbar-buttons {
+    display: flex;
+    justify-content: space-between;  /* Ensures equal space between buttons */
+    gap: 80px; /* Adds spacing between the buttons */
+    align-items: center; /* Vertically centers the buttons */
+  }
+  
+  .navb {
+    padding: 8px 15px;
+    margin:30px;
+    font-size: 16px;
+    color: #f44336; /* Button text color */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .navb:hover {
+    color: #0056b3; /* Darker text color on hover */
+    background-color: #e9ecef; /* Light background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .navbar-buttons {
+      flex-direction: column;  /* Stacks the buttons on smaller screens */
+      gap: 10px; /* Reduces space between buttons on smaller screens */
+    }
+  }
+  
+
+/* Container for tasks */
+.task-container {
+  padding: 20px;
+  max-width: 1250px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Add New Task Button */
+.add-task-btn {
+  margin-bottom: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-task-btn:hover {
+  background-color: #45a049;
+}
+
+/* Toggle Archived Tasks Button */
+.toggle-archived-btn {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-archived-btn:hover {
+  background-color: #138496;
+}
+
+/* Form container styling */
+.task-form-container {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  width: max-content;
+  align-content: center;
+}
+
+.task-form-container h3 {
+  font-weight: 500;
+  color: #4CAF50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Task form inputs and buttons */
+.task-form {
+  display: flex;
+  flex-direction: column;
+  width:min-content
+}
+
+.task-form .form-group {
+  margin-bottom: 15px;
+}
+
+.task-form .form-control {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.task-form .form-control:focus {
+  border-color: #4CAF50;
+}
+
+.task-form .submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.task-form .submit-btn:hover {
+  background-color: #45a049;
+}
+
+.task-form .cancel-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.task-form .cancel-btn:hover {
+  background-color: #e53935;
+}
+
+/* Task List Styling */
+.task-list {
+  margin-top: 30px;
+}
+
+.task-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.task-card:nth-child(even) {
+  background-color: #f1f1f1; /* Alternating background for even task cards */
+}
+
+.task-card h4 {
+  font-weight: 600;
+  color: #333;
+}
+
+.task-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.task-actions button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.task-actions button:hover {
+  opacity: 0.9;
+}
+
+/* Archive/Unarchive buttons */
+.task-actions button.secondary {
+  background-color: #9E9E9E;
+  color: white;
+}
+
+.task-actions button.warning {
+  background-color: #ff9800;
+  color: white;
+}
+
+.task-actions button.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.task-actions button.danger {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Container for all tasks */
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+/* Individual task card */
+.task-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px; /* Adjust this based on how wide you want the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #f1f1f1;
+}
+
+.task-card:nth-child(even) {
+    background-color: #e9e9e9; /* Alternating background color */
+}
+
+/* Hover effect on task cards */
+.task-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Task title and text */
+.task-card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.task-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* Action buttons */
+.task-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.task-actions button {
+    flex-grow: 1;
+    padding: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .task-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
