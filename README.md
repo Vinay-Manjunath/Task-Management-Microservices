@@ -81,4 +81,3 @@ Troubleshooting
 
     Frontend Issues:
     Ensure npm install has been executed in the my-app directory.
-
